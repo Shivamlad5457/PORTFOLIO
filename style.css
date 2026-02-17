@@ -53,6 +53,123 @@ header nav a:hover::after{
 width:100%;
 }
 
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    padding: 15px 10%;
+    background: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: #38bdf8;
+}
+
+/* Nav Links Desktop */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #38bdf8;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #1e293b;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #1e293b;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 12px 10px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: 0.3s ease;
+    }
+
+    nav a i {
+        color: #38bdf8;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        background: rgba(56, 189, 248, 0.15);
+        transform: translateX(5px);
+    }
+}
+
+
+
 /* Sections */
 section{
 padding:120px 8%;

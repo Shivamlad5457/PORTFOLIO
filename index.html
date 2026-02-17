@@ -18,15 +18,23 @@
         <div class="logo">
             <h2>Shivam Lad</h2>
         </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    
+        <!-- Hamburger Button -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    
+        <nav id="navbar">
+            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+            <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+            <a href="#certifications"><i class="fa-solid fa-award"></i> Certifications</a>
+            <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
+        
     </header>
+    
 
     <section id="home" class="hero">
         <div class="hero-container">
@@ -192,5 +200,18 @@
         © 2026 Shivam Lad | All Rights Reserved
     </footer>
 
+
+
+
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+    
+        toggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>
+    
 </body>
 </html>
