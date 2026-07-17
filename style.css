@@ -211,8 +211,8 @@ text-align:center;
 
 /* Profile Image */
 .profile-img {
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     z-index: 2;
