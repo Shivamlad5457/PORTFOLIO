@@ -4,255 +4,1032 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Lad | Portfolio</title>
+    <title>Shivam Lad | Software Engineer & Full Stack Developer</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-        <div class="logo">
-            <h2>Shivam Lad</h2>
-        </div>
-    
-        <!-- Hamburger Button -->
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    
-        <nav id="navbar">
-            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-            <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
-            <a href="#certifications"><i class="fa-solid fa-award"></i> Certifications</a>
-            <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
-            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
-        </nav>
-        
-    </header>
-    
+        <a href="#home" class="logo">
+            <h2>Shivam <span>Lad</span></h2>
+        </a>
 
+        <div class="nav-container">
+            <nav id="navbar">
+                <a href="#home" class="active-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#certifications-achievements"><i class="fa-solid fa-award"></i> Certifications &
+                    Achievements</a>
+                <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+                <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            </nav>
+
+            <!-- Resume & Theme Buttons -->
+            <a href="resume.html" target="_blank" class="btn secondary-btn btn-resume-trigger"
+                style="padding: 8px 16px; font-size: 13px;" title="View & Download Resume">
+                <i class="fa-solid fa-file-pdf"></i> Resume
+            </a>
+
+            <!-- Theme Toggle Switch -->
+            <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- Hamburger Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-    
-            <!-- Profile Image with Glow -->
-            <div class="profile-wrapper">
-                <div class="profile-glow"></div>
-                <img src="gemini image shivam side.png" alt="Shivam Lad" class="profile-img">
-            </div>
-    
-            <!-- Hero Content -->
-            <div class="hero-content">
-                <h1>Hello, I'm <span>Shivam Lad.</span></h1>
-                <h2>Software Engineer</h2>
-    
+            <!-- Hero Left Content -->
+            <div class="hero-content reveal">
+
+                <h1>Hello, I'm <br><span>Shivam Lad</span></h1>
+                <h2>
+                    I am a <span id="typing-text">Software Engineer</span>
+                    <span class="typing-cursor"></span>
+                </h2>
+
                 <p>
-                    I design and develop scalable, high-performance web applications 
-                    with modern technologies and clean architecture.
+                    Passionate Computer Science Engineering student building scalable, high-performance web applications
+                    with clean architecture, OOP principles, optimized algorithms, and intuitive design.
                 </p>
-    
+
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn primary-btn">View Projects</a>
-                    <a href="#contact" class="btn secondary-btn">Hire Me</a>
+                    <a href="resume.html" target="_blank" class="btn primary-btn" id="download-resume-btn">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="btn secondary-btn">
+                        <i class="fa-solid fa-eye"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn secondary-btn">
+                        <i class="fa-solid fa-envelope"></i> Get in Touch
+                    </a>
+                </div>
+
+                <!-- Quick Stats Row -->
+                <div class="quick-stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">8.5+</span>
+                        <span class="stat-label">Engineering CGPA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">NPTEL</span>
+                        <span class="stat-label">DSA in Java Certified</span>
+                    </div>
                 </div>
             </div>
-    
+
+            <!-- Profile Image Card -->
+            <div class="profile-wrapper reveal">
+                <div class="profile-glow"></div>
+                <div class="profile-img-card">
+                    <img src="profilephoto.png" alt="Shivam Lad" class="profile-img" referrerPolicy="no-referrer">
+                </div>
+            </div>
         </div>
     </section>
-    
-    
 
+    <!-- About Me Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                I'm a passionate <strong>Full Stack Developer</strong> and Computer Science Engineering student 
-                focused on building scalable and user-friendly web applications.
-            </p>
-    
-            <p>
-                Through my <strong>NPTEL certification of DSA in Java</strong>, I gained in-depth knowledge of theoretical foundations 
-                and practical implementation strategies.It refined my logical reasoning skills and strengthened my approach to writing
-                optimized code.
-            </p>
-    
-            <p>
-                I am constantly learning new technologies and improving my problem-solving skills.
-                My goal is to contribute to impactful software products that create real-world value.
-            </p>
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <p class="section-subtitle">A simple overview of my personal details and technical background</p>
+
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Computer Science and Engineering student with a strong passion for software development and
+                        building efficient, user-focused solutions. Experienced in developing real-world projects and
+                        applying software engineering principles to solve practical problems.
+                    </p>
+                    <p>
+                        Through my <strong>NPTEL certification in Data Structures and Algorithms using Java</strong>
+                        from IIT Kharagpur, I built a solid foundation in core computer science, algorithmic efficiency,
+                        object-oriented design, and problem solving.
+                    </p>
+                    <p>
+                        I am a quick learner with strong analytical, problem-solving, and collaboration skills, seeking
+                        opportunities to contribute to innovative development teams while continuously expanding my
+                        technical expertise.
+                    </p>
+                </div>
+
+                <div class="personal-info-card reveal">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-address-card"></i>
+                        <h3>Personal Details</h3>
+                    </div>
+                    <div class="info-details-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+                            <div class="info-content">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value">Shivam Vilas Lad</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-content">
+                                <span class="info-label">Email</span>
+                                <a href="mailto:shivamlad.0909@gmail.com"
+                                    class="info-value">shivamlad.0909@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-content">
+                                <span class="info-label">Phone</span>
+                                <a href="tel:+919309073402" class="info-value">+91 9309073402</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-content">
+                                <span class="info-label">Address</span>
+                                <span class="info-value">Kolhapur, Maharashtra, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
 
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Academic <span>Education</span></h2>
+            <p class="section-subtitle">My educational qualification background and academic timeline</p>
+
+            <div class="education-timeline reveal">
+                <!-- 1. B.Tech -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-badge">2023 – 2027</span>
+                                <h3>Bachelor of Technology (B.Tech.) – Computer Science & Engineering</h3>
+                                <h4 class="timeline-institution">Tatyasaheb Kore Institute of Engineering & Technology
+                                    (TKIET), Warananagar</h4>
+                            </div>
+                            <div class="timeline-score">
+                                <span class="score-value">8.5 / 10</span>
+                                <span class="score-label">CGPA</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Pursuing Computer Science Engineering focusing on Data Structures & Algorithms,
+                            Object-Oriented Programming, Database Management Systems, and Web Application Development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. HSC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-badge">2023</span>
+                                <h3>Higher Secondary Certificate (HSC) – Science</h3>
+                                <h4 class="timeline-institution">Samaj Vikas Sec. & Higher Secondary Vidyalaya, Sagaon
+                                </h4>
+                            </div>
+                            <div class="timeline-score">
+                                <span class="score-value">64.00%</span>
+                                <span class="score-label">Percentage</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Completed higher secondary education in Science with core subjects in Physics, Chemistry,
+                            Mathematics, and foundational science concepts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. SSC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-award"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-badge">2021</span>
+                                <h3>Secondary School Certificate (SSC)</h3>
+                                <h4 class="timeline-institution">Samaj Vikas Sec. & Higher Secondary Vidyalaya, Sagaon
+                                </h4>
+                            </div>
+                            <div class="timeline-score">
+                                <span class="score-value">78.00%</span>
+                                <span class="score-label">Percentage</span>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">
+                            Achieved high academic performance with core fundamental training in science, mathematics,
+                            and problem-solving basics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill"><i class="fa-brands fa-html5"></i><p>HTML</p></div>
-            <div class="skill"><i class="fa-brands fa-css3-alt"></i><p>CSS</p></div>
-            <div class="skill"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
-            <div class="skill"><i class="fa-brands fa-java"></i><p>Java</p></div>
-            <div class="skill"><i class="fa-solid fa-code"></i><p>MERN Stack</p></div>
-            <div class="skill"><i class="fa-brands fa-python"></i><p>Python</p></div>
-            <div class="skill"><i class="fa-brands fa-github"></i><p>Git & GitHub</p></div>
-            <div class="skill"><i class="fa-solid fa-puzzle-piece"></i><p>DBMS</p></div>
-            <div class="skill"><i class="fa-solid fa-robot"></i><p>Prompt Engineering</p></div>
+        <div class="container">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            <p class="section-subtitle">Core programming languages, frameworks, databases, and engineering tools</p>
 
+            <div class="skills-categories">
+                <!-- Languages Category -->
+                <div class="skill-category-card reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-terminal"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-pill"><i class="fa-brands fa-java"></i> Java</div>
+                        <div class="skill-pill"><i class="fa-brands fa-python"></i> Python</div>
+                        <div class="skill-pill"><i class="fa-solid fa-c"></i> C</div>
+                    </div>
+                </div>
+
+                <!-- Web Development & Frameworks -->
+                <div class="skill-category-card reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-pill"><i class="fa-brands fa-html5"></i> HTML</div>
+                        <div class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                        <div class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+                        <div class="skill-pill"><i class="fa-solid fa-cubes-stacked"></i> MERN</div>
+                        <div class="skill-pill"><i class="fa-brands fa-php"></i> PHP</div>
+                        <div class="skill-pill"><i class="fa-solid fa-network-wired"></i> REST APIs</div>
+                    </div>
+                </div>
+
+                <!-- Core Concepts & Databases -->
+                <div class="skill-category-card reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>Core Concepts & Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-pill"><i class="fa-solid fa-diagram-project"></i> DSA</div>
+                        <div class="skill-pill"><i class="fa-solid fa-cubes"></i> OOP</div>
+                        <div class="skill-pill"><i class="fa-solid fa-database"></i> DBMS/SQL</div>
+                        <div class="skill-pill"><i class="fa-solid fa-cloud"></i> Cloud Computing</div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category-card reveal">
+                    <div class="category-header">
+                        <i class="fa-solid fa-toolbox"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-pill"><i class="fa-brands fa-github"></i> Git & GitHub</div>
+                        <div class="skill-pill"><i class="fa-solid fa-robot"></i> Prompt Engineering</div>
+                        <div class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Combined Certifications & Achievements Section -->
+    <section id="certifications-achievements">
+        <div class="container">
+            <h2 class="section-title">Certifications & <span>Achievements</span></h2>
+            <p class="section-subtitle">Verified credentials, technical achievements, and industrial internships</p>
 
+            <!-- Filter Tabs -->
+            <div class="cert-controls reveal">
+                <div class="filter-tabs">
+                    <button class="cert-filter-btn active" data-filter="all">All Credentials (9)</button>
+                    <button class="cert-filter-btn" data-filter="certification">Certifications (7)</button>
+                    <button class="cert-filter-btn" data-filter="achievement">Achievements & Internships (2)</button>
+                </div>
+            </div>
+
+            <!-- Credentials Grid -->
+            <div class="cert-grid" id="cert-grid">
+
+                <!-- 1. NPTEL DSA -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="nptel java dsa data structures algorithm iit">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/nptel.png" alt="NPTEL Data Structure & Algorithm Using Java Certificate"
+                            class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Data Structure & Algorithm Using Java</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-building-columns"></i> NPTEL Online
+                                Certification (IIT Kharagpur)</div>
+                            <p class="cert-desc">Rigorous certification covering computational complexity, theoretical
+                                foundations, tree traversal, graph algorithms, and optimized Java data structures.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1QHMXnvVZQ4LGbUD6q4er8Naf2MX8UFVH/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="Data Structure & Algorithm Using Java"
+                                data-issuer="NPTEL Online Certification (IIT Kharagpur)" data-category="certification"
+                                data-desc="Comprehensive 12-week course and exam covering arrays, linked lists, stacks, queues, trees, heaps, graphs, sorting/searching algorithms, and dynamic programming in Java."
+                                data-link="https://drive.google.com/file/d/1QHMXnvVZQ4LGbUD6q4er8Naf2MX8UFVH/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Qspiders Internship -->
+                <div class="cert-card-item cert-item reveal" data-category="achievement"
+                    data-tags="qspiders internship Java training software engineering">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/qspider.png" alt="Qspiders Internship Selection Document"
+                            class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="type-tag achievement">Achievement</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Qspiders Internship Selection</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-building"></i> Qspiders Software Testing &
+                                Development</div>
+                            <p class="cert-desc">Selected for the prestigious Qspiders Internship Training Program
+                                focused on advanced software engineering, Java development, and testing methodologies.
+                            </p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1h1Um_HFd6QFkVIHgXBlAZBViKXNrv9eW/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Document
+                            </a>
+                            <button class="btn-view-detail" data-title="Qspiders Internship Selection"
+                                data-issuer="Qspiders" data-category="achievement"
+                                data-desc="Selected for intensive training and industry internship program covering Java programming, SQL database design, web application development, and software testing principles."
+                                data-link="https://drive.google.com/file/d/1h1Um_HFd6QFkVIHgXBlAZBViKXNrv9eW/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. CodSoft Internship -->
+                <div class="cert-card-item cert-item reveal" data-category="achievement"
+                    data-tags="codsoft java programming internship software development">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/codsoft.png" alt="CodSoft Java Internship Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-solid fa-medal"></i></div>
+                            <span class="type-tag achievement">Achievement</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>CodSoft Java Internship</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-laptop-code"></i> CodSoft</div>
+                            <p class="cert-desc">Completed hands-on Java Programming internship implementing real-world
+                                software applications, OOP design patterns, and clean code principles.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1Gxp5-yfuU_2aw2mGI7XQ2ObI_1Ha6Fde/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Document
+                            </a>
+                            <button class="btn-view-detail" data-title="CodSoft Java Internship" data-issuer="CodSoft"
+                                data-category="achievement"
+                                data-desc="Successfully completed Java Programming internship project deliverables, implementing object-oriented software applications and GUI/console tools."
+                                data-link="https://drive.google.com/file/d/1Gxp5-yfuU_2aw2mGI7XQ2ObI_1Ha6Fde/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Python Programming -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="python programming yash aradhye scripting">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/python.png" alt="Python Programming Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-brands fa-python"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Python Programming</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-certificate"></i> Yash Aradhye Classes</div>
+                            <p class="cert-desc">Comprehensive certification covering Python core syntax, data
+                                structures, object-oriented concepts, and automation scripting techniques.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1DhmcYU5-3NGQQFNRcBGR-1lD0_lcbeLn/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="Python Programming Certification"
+                                data-issuer="Yash Aradhye Classes" data-category="certification"
+                                data-desc="Mastered fundamental Python concepts, dictionary manipulation, file handling, exception handling, and custom module building."
+                                data-link="https://drive.google.com/file/d/1DhmcYU5-3NGQQFNRcBGR-1lD0_lcbeLn/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Generative AI Mastermind -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="generative ai mastermind outskill prompt engineering artificial intelligence">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/outskillGenAi.png" alt="Generative AI Mastermind Certificate"
+                            class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-solid fa-brain"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Generative AI Mastermind</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-sparkles"></i> Outskill Certified Foundations
+                            </div>
+                            <p class="cert-desc">Foundational training in Generative AI techniques, LLM prompt
+                                engineering strategies, workflow automation, and AI tools integration.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1zxTM8p_cT9Gzij1sh0hde1NgcYgFzcb7/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="Generative AI Mastermind" data-issuer="Outskill"
+                                data-category="certification"
+                                data-desc="Certified foundations in Gen AI models, prompt construction, generative workflows, AI API usage, and AI-driven design productivity."
+                                data-link="https://drive.google.com/file/d/1zxTM8p_cT9Gzij1sh0hde1NgcYgFzcb7/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. TCS iON Career Edge -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="tcs ion career edge young professional corporate communication skills">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/tcsion.png" TCS iON Career Edge Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>TCS iON Career Edge - Young Professional</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-building"></i> TCS iON</div>
+                            <p class="cert-desc">Professional corporate readiness program focusing on soft skills,
+                                business communication, email etiquette, agile basics, and workplace fundamentals.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1zjnROnEFUOLYUT4yQsLdZ2jmYANauZoC/view?usp=drivesdk"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="TCS iON Career Edge" data-issuer="TCS iON"
+                                data-category="certification"
+                                data-desc="Certified in professional workplace readiness, business etiquette, IT industry fundamentals, and effective communication skills by Tata Consultancy Services."
+                                data-link="https://drive.google.com/file/d/1zjnROnEFUOLYUT4yQsLdZ2jmYANauZoC/view?usp=drivesdk"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Git & GitHub Bootcamp -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="git github version control lets upgrade bootcamp repository">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/github.png" alt="Git & GitHub Bootcamp Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-brands fa-github"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Git & GitHub Bootcamp</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-code-branch"></i> Lets Upgrade</div>
+                            <p class="cert-desc">Mastered essential source control workflows, git branching strategies,
+                                pull requests, merge conflict resolution, and GitHub Actions basics.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/16zImmY3hYq6UNy5cYCoW8lWhIiiNtcbC/view"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="Git & GitHub Bootcamp"
+                                data-issuer="Lets Upgrade" data-category="certification"
+                                data-desc="Practical training in distributed version control systems, git commits, remote repositories, collaboration practices, and code review workflows."
+                                data-link="https://drive.google.com/file/d/16zImmY3hYq6UNy5cYCoW8lWhIiiNtcbC/view"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Introduction to Generative AI Studio -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="google cloud generative ai studio prompt engineering simplilearn llm">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/genaigoogle.png" alt="Introduction to Generative AI Studio Certificate"
+                            class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-brands fa-google"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Introduction to Generative AI Studio</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-cloud"></i> Google Cloud (Simplilearn
+                                SkillUp)</div>
+                            <p class="cert-desc">Professional completion declaration for Google Cloud's Generative AI
+                                Studio, demonstrating proficiency in generative AI models, prompt construction, and
+                                solution workflows.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1MHOSKSLPTl105EMXn5oyTaFTSJ831sRl/view?usp=drive_link"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail" data-title="Introduction to Generative AI Studio"
+                                data-issuer="Google (Simplilearn SkillUp)" data-category="certification"
+                                data-desc="Successfully completed Google Cloud online course on Introduction to Generative AI Studio (Certificate Code: 10524604, Issued 28th July 2026). Demonstrated initiative and commitment to mastering generative AI platforms and prompt workflows."
+                                data-link="https://drive.google.com/file/d/1MHOSKSLPTl105EMXn5oyTaFTSJ831sRl/view?usp=drive_link"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Introduction to Prompt Engineering with GitHub Copilot -->
+                <div class="cert-card-item cert-item reveal" data-category="certification"
+                    data-tags="microsoft github copilot prompt engineering AI simplilearn">
+                    <div class="cert-img-wrapper">
+                        <img src="Certificates/promptmicrosoft.png"
+                            alt="Introduction to Prompt Engineering with GitHub Copilot Certificate" class="cert-img">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <div class="badge-icon"><i class="fa-brands fa-microsoft"></i></div>
+                            <span class="type-tag certification">Certification</span>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Introduction to Prompt Engineering with GitHub Copilot</h3>
+                            <div class="cert-issuer"><i class="fa-solid fa-robot"></i> Microsoft (Simplilearn SkillUp)
+                            </div>
+                            <p class="cert-desc">Certified by Microsoft in Prompt Engineering with GitHub Copilot,
+                                focusing on AI-assisted software development, context tuning, and code generation.</p>
+                        </div>
+                        <div class="cert-footer">
+                            <a href="https://drive.google.com/file/d/1JextcyFW59OYXRJR4FLAsxuBtixrDo8i/view"
+                                target="_blank" class="btn-cert-link">
+                                <i class="fa-solid fa-external-link"></i> View Certificate
+                            </a>
+                            <button class="btn-view-detail"
+                                data-title="Introduction to Prompt Engineering with GitHub Copilot"
+                                data-issuer="Microsoft (Simplilearn SkillUp)" data-category="certification"
+                                data-desc="Successfully completed Microsoft online course on Introduction to Prompt Engineering with GitHub Copilot (Certificate Code: 10528894, Issued 29th July 2026). Specialized in prompt structuring, context management, and AI pair programming."
+                                data-link="https://drive.google.com/file/d/1JextcyFW59OYXRJR4FLAsxuBtixrDo8i/view"
+                                title="Quick View">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="no-results" id="no-cert-results">
+                <i class="fa-solid fa-circle-question"
+                    style="font-size: 32px; margin-bottom: 10px; color: var(--accent-primary);"></i>
+                <p>No certificates or achievements match your search query.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-    
-        <div class="project-container">
-    
-            <a href="https://agrirent-beta.vercel.app/" class="project-badge">
-                <div class="project-card">
-                    <h3>Agricultural Tools Rental</h3>
-                    <p>Online system for renting agricultural tools.</p>
+        <div class="container">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <p class="section-subtitle">Real-world full-stack web applications built with clean code and robust database
+                design</p>
+
+            <div class="project-grid">
+
+                <!-- 2. AgriRent -->
+                <div class="project-card-item reveal" data-category="web">
+                    <div class="project-img-wrapper">
+                        <img src="agrirent.png" alt="Agricultural Tools Rental Platform (AgriRent)" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>Agricultural Tools Rental Platform (AgriRent)</h3>
+                        <p>A full-stack rental platform enabling farmers to browse, book, and manage agricultural tools
+                            online, with a MySQL-backed schema for inventory, bookings, and user records.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://agrirent-beta.vercel.app/" target="_blank" class="btn-project btn-live">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Shivamlad5457/AgriRent" target="_blank"
+                                class="btn-project btn-github">
+                                <i class="fa-brands fa-github"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </a>
-    
-            <a href="https://ration.infinityfreeapp.com/pages/login.php?i=1" class="project-badge">
-                <div class="project-card">
-                    <h3>Smart Ration Distribution System</h3>
-                    <p>Ration Management & Distribution.</p>
+
+                <!-- 1. Smart Ration Distribution -->
+                <div class="project-card-item reveal" data-category="web">
+                    <div class="project-img-wrapper">
+                        <img src="ration.png" alt="Smart Ration Distribution & Secure Authentication System"
+                            class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Ration Distribution & Secure Authentication System</h3>
+                        <p>A web-based ration distribution system enabling real-time inventory management, quota
+                            allocation, and OTP-based two-factor authentication with advanced account security
+                            mechanisms.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">2FA / Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ration.infinityfreeapp.com/pages/login.php?i=1" target="_blank"
+                                class="btn-project btn-live">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Portal
+                            </a>
+                            <a href="https://github.com/Shivamlad5457/Smart-Ration-Distribution-System" target="_blank"
+                                class="btn-project btn-github">
+                                <i class="fa-brands fa-github"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </a>
-    
-            <a href="https://shivamlad5457.github.io/ThemeChange/" class="project-badge">
-                <div class="project-card">
-                    <h3>Theme Changer</h3>
-                    <p>Background Theme Changes according event</p>
-                </div>
-            </a>
-        
-            <a href="https://shivamlad5457.github.io/GenerateRandomColor/" class="project-badge">
-                <div class="project-card">
-                    <h3>Generate Colors</h3>
-                    <p>Generating Random Colors Onclick</p>
-                </div>
-            </a>
-            
-        </div>
-    </section>
 
-
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="cert-container">
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-award"></i></div>
-                <h3>Data Structure & Algorithm Using Java</h3>
-                <p>NPTEL Online Certification</p>
-                <a href="https://drive.google.com/file/d/1QHMXnvVZQ4LGbUD6q4er8Naf2MX8UFVH/view?usp=drivesdk" class="view-btn">View Certificate</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-certificate"></i></div>
-                <h3>Python Programming</h3>
-                <p>Yash Aradhye Classes</p>
-                <a href="https://drive.google.com/file/d/1DhmcYU5-3NGQQFNRcBGR-1lD0_lcbeLn/view?usp=drivesdk" class="view-btn">View Certificate</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-medal"></i></div>
-                <h3>Generative AI Mastermind</h3>
-                <p>Outskill Certified Foundations</p>
-                <a href="https://drive.google.com/file/d/1zxTM8p_cT9Gzij1sh0hde1NgcYgFzcb7/view?usp=drivesdk" class="view-btn">View Certificate</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-microchip"></i></div>
-                <h3>TCS iON Career Edge - Young Professional</h3>
-                <p>TCS ION</p>
-                <a href="https://drive.google.com/file/d/1zjnROnEFUOLYUT4yQsLdZ2jmYANauZoC/view?usp=drivesdk" class="view-btn">View Certificate</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>Python Full Stack Developer Virtual Internship</h3>
-                <p>Eduskill</p>
-                <a href="https://drive.google.com/file/d/1FdU-g4VtbE7FSxalaDwRCckDnxq20De4/view?usp=drivesdk" class="view-btn">View Certificate</a>
-            </div>
-
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-scroll"></i></div>
-                <h3>Git & GitHub Bootcamp</h3>
-                <p>Lets Upgrade</p>
-                <a href="https://drive.google.com/file/d/16zImmY3hYq6UNy5cYCoW8lWhIiiNtcbC/view" class="view-btn">View Certificate</a>
-            </div>
-
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-brain"></i></div>
-                <h3>Technology Job Simulation</h3>
-                <p>Deloitte</p>
-                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_uTSA2CemdxDFRn2eg_1752124981898_completion_certificate.pdf" class="view-btn">View Certificate</a>
-            </div>
-
-            <div class="cert-card">
-                <div class="cert-badge"><i class="fa-solid fa-file-lines"></i></div>
-                <h3>Design Fundamentals with AI-Adobe</h3>
-                <p>Adobe</p>
-                <a href="https://drive.google.com/file/d/19Eizag6QE17hX5Q6ssM1-vZcXwmrc7K0/view" class="view-btn">View Certificate</a>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Achievements</h2>
-    
-        <div class="project-container">
-    
-            <a href="https://drive.google.com/file/d/1h1Um_HFd6QFkVIHgXBlAZBViKXNrv9eW/view?usp=drivesdk" class="project-badge">
-                <div class="project-card">
-                    <h3>Qspiders Internship</h3>
-                    <p>Selected for Qspiders Internship Training Program.</p>
-                </div>
-            </a>
-
-            <a href="https://drive.google.com/file/d/1Gxp5-yfuU_2aw2mGI7XQ2ObI_1Ha6Fde/view?usp=drivesdk" class="project-badge">
-                <div class="project-card">
-                    <h3>Codesoft Internship</h3>
-                    <p>Java Programming CodSoft Internship.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-    
-
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-box">
-            <div><i class="fa-solid fa-envelope"></i> shivamlad.0909@gmail.com</div>
-            <div><i class="fa-solid fa-phone"></i> +91 9309073402</div>
-            <div><i class="fa-solid fa-location-dot"></i> Maharashtra, India</div>
-        </div>
-        <div class="contact-social">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamlad@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/Shivamlad5457" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/shivam-lad-998b972ba/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/shivam._.45?igsh=NHpxNnRvNXVwZmFt"><i class="fa-brands fa-instagram"></i></a>
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p class="section-subtitle">Feel free to reach out for collaborations, job opportunities, or inquiries</p>
+
+            <div class="contact-container">
+                <!-- Info Left -->
+                <div class="contact-info-card reveal">
+                    <div>
+                        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 25px; color: var(--text-primary);">
+                            Contact Information
+                        </h3>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h5>Email</h5>
+                                <a href="mailto:shivamlad.0909@gmail.com">shivamlad.0909@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h5>Phone</h5>
+                                <a href="tel:+919309073402">+91 9309073402</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h5>Location</h5>
+                                <p>Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Copy Email Button -->
+                    <button class="btn secondary-btn" id="copy-email-btn"
+                        style="width: 100%; justify-content: center; margin-top: 10px;">
+                        <i class="fa-solid fa-copy"></i> Copy Email Address
+                    </button>
+
+                    <!-- Social Connect -->
+                    <div class="social-connect">
+                        <h4>Connect On Social Media</h4>
+                        <div class="social-links">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamlad.0909@gmail.com"
+                                target="_blank" class="social-btn" title="Email Shivam">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://github.com/Shivamlad5457" target="_blank" class="social-btn"
+                                title="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shivam-lad-998b972ba/" target="_blank"
+                                class="social-btn" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/shivam._.45?igsh=NHpxNnRvNXVwZmFt" target="_blank"
+                                class="social-btn" title="Instagram Profile">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Right -->
+                <div class="contact-form reveal">
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 25px; color: var(--text-primary);">
+                        Send Me a Message
+                    </h3>
+
+                    <form id="portfolio-contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Your Full Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email">Your Email Address</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Your Message</label>
+                            <textarea id="form-message" placeholder="Hello Shivam, I would like to discuss a project..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary-btn" style="width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        © 2026 Shivam Lad | All Rights Reserved
+        <div class="container">
+            <p>© 2026 Shivam Lad | Engineered with passion using HTML, CSS & JavaScript.</p>
+        </div>
     </footer>
 
+    <!-- Modal Popup for Certificate & Achievement Details -->
+    <div class="modal-overlay" id="credential-modal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span id="modal-category">Certification</span>
+                <h3 id="modal-title">Credential Title</h3>
+                <p id="modal-issuer"
+                    style="color: var(--accent-primary); font-size: 14px; font-weight: 600; margin-top: 4px;"></p>
+            </div>
+            <div class="modal-body">
+                <p id="modal-desc"></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modal-link" target="_blank" class="btn primary-btn"
+                    style="flex: 1; justify-content: center;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Full Credential
+                </a>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modal Popup for Attached Resume (PDF Preview) -->
+    <div class="modal-overlay" id="resume-modal">
+        <div class="modal-content resume-modal-content" style="max-width: 860px; max-height: 90vh; overflow-y: auto;">
+            <button class="modal-close-btn" id="resume-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header"
+                style="display: flex; justify-content: space-between; align-items: center; padding-right: 35px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 15px;">
+                <div>
+                    <span
+                        style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent-primary); letter-spacing: 1px;">Document
+                        Attached (PDF)</span>
+                    <h3 style="font-size: 18px; margin-top: 2px; color: var(--text-primary);"><i
+                            class="fa-solid fa-file-pdf" style="color: #e11d48; margin-right: 6px;"></i> Shivam Lad -
+                        Resume.pdf</h3>
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <!-- Exact PDF Render Box -->
+                <div class="pdf-modal-paper"
+                    style="background: #ffffff; color: #111827; padding: 35px 40px; border-radius: 8px; border: 1px solid #cbd5e1; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.5; text-align: left;">
 
+                    <div style="margin-bottom: 16px;">
+                        <h2
+                            style="font-size: 22px; font-weight: 700; color: #000; text-transform: uppercase; margin-bottom: 2px;">
+                            SHIVAM LAD</h2>
+                        <div style="font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 4px;">Software
+                            Engineer | Full-Stack Developer</div>
+                        <div style="font-size: 12px; color: #374151; margin-bottom: 4px;">Kolhapur, Maharashtra, India
+                            &nbsp;|&nbsp; +91 9309073402 &nbsp;|&nbsp; shivamlad.0909@gmail.com</div>
+                        <div style="font-size: 12px; color: #2563eb;">
+                            <a href="https://github.com/Shivamlad5457" target="_blank"
+                                style="color: #2563eb; text-decoration: underline;">GitHub</a> &nbsp;|&nbsp;
+                            <a href="https://linkedin.com/in/shivam-lad" target="_blank"
+                                style="color: #2563eb; text-decoration: underline;">Linkedin</a> &nbsp;|&nbsp;
+                            <a href="index.html" target="_blank"
+                                style="color: #2563eb; text-decoration: underline;">Portfolio</a> &nbsp;|&nbsp;
+                            <a href="https://leetcode.com/" target="_blank"
+                                style="color: #2563eb; text-decoration: underline;">Leetcode</a>
+                        </div>
+                    </div>
 
+                    <div style="margin-bottom: 14px;">
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            ABOUT</div>
+                        <p style="font-size: 12.5px; color: #1f2937; line-height: 1.5;">
+                            Computer Science and Engineering student with a strong passion for software development and
+                            building efficient, user-focused solutions. Experienced in developing real-world projects
+                            and applying software engineering principles to solve practical problems. A quick learner
+                            with strong analytical, problem-solving, and collaboration skills, seeking opportunities to
+                            contribute to innovative development teams while continuously expanding technical expertise.
+                        </p>
+                    </div>
 
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const navbar = document.getElementById("navbar");
-    
-        toggle.addEventListener("click", () => {
-            navbar.classList.toggle("active");
-        });
-    </script>
-    
+                    <div style="margin-bottom: 14px;">
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            TECHNICAL SKILLS</div>
+                        <div style="font-size: 12.5px; color: #1f2937; line-height: 1.6;">
+                            <div><strong>Programming Languages:</strong> Java, Python.</div>
+                            <div><strong>Web Development:</strong> Full Stack Web Developer</div>
+                            <div><strong>Core Concepts:</strong> Data Structures & Algorithms (DSA), OOP, DBMS, GitHub ,
+                                MySQL</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            PROJECTS</div>
+                        <div style="margin-bottom: 8px;">
+                            <div style="font-size: 13px; font-weight: 700; color: #000;">Ration Distribution & Secure
+                                Authentication System</div>
+                            <div style="font-size: 12px; color: #374151; margin-bottom: 2px;"><strong>Tech
+                                    Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript.</div>
+                            <ul style="padding-left: 16px; font-size: 12px; color: #1f2937; list-style-type: disc;">
+                                <li>Built a Secure web based ration distribution system enabling real-time inventory
+                                    management, quota allocation, and OTP-based two-factor authentication with advanced
+                                    account security mechanisms.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: #000;">Agricultural Tools Rental
+                                Platform</div>
+                            <div style="font-size: 12px; color: #374151; margin-bottom: 2px;"><strong>Tech
+                                    Stack:</strong> React, MySQL , Full Stack .</div>
+                            <ul style="padding-left: 16px; font-size: 12px; color: #1f2937; list-style-type: disc;">
+                                <li>Developed a full-stack rental platform enabling farmers to browse, book, and manage
+                                    agricultural tools online, with a MySQL-backed schema for inventory, bookings, and
+                                    user records.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            EDUCATION</div>
+                        <div style="margin-bottom: 6px;">
+                            <div
+                                style="display: flex; justify-content: space-between; font-weight: 700; color: #000; font-size: 12.5px;">
+                                <span>Bachelor of Technology (B.Tech.) – Computer Science & Engineering</span>
+                                <span>2023-2027 &nbsp; CGPA: 8.5/10</span>
+                            </div>
+                            <div style="font-size: 12px; color: #374151;">Tatyasaheb Kore Institute of Engineering &
+                                Technology (TKIET), Warananagar</div>
+                        </div>
+                        <div style="margin-bottom: 6px;">
+                            <div
+                                style="display: flex; justify-content: space-between; font-weight: 700; color: #000; font-size: 12.5px;">
+                                <span>Higher Secondary Certificate (HSC) – Science</span>
+                                <span>2023 &nbsp; 64%</span>
+                            </div>
+                            <div style="font-size: 12px; color: #374151;">Samaj Vikas Sec. & Higher Secondary Vidyalaya,
+                                Sagaon.</div>
+                        </div>
+                        <div>
+                            <div
+                                style="display: flex; justify-content: space-between; font-weight: 700; color: #000; font-size: 12.5px;">
+                                <span>Secondary School Certificate (SSC)</span>
+                                <span>2021 &nbsp; 78%</span>
+                            </div>
+                            <div style="font-size: 12px; color: #374151;">Samaj Vikas Sec. & Higher Secondary Vidyalaya,
+                                Sagaon.</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 14px;">
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            ACHIEVEMENTS</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: #000;">Selected for Qspiders
+                                Internship</div>
+                            <ul style="padding-left: 16px; font-size: 12px; color: #1f2937; list-style-type: disc;">
+                                <li>Received an offer for a 3-month internship training program after clearing a
+                                    competitive technical screening test, aimed at strengthening technical skills and
+                                    gaining industry exposure.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                            style="font-size: 12.5px; font-weight: 700; color: #000; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 6px;">
+                            CERTIFICATION</div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 700; color: #000;">NPTEL – Data Structures and
+                                Algorithms using Java</div>
+                            <div style="font-size: 12px; color: #4b5563;">Issued by IIT Kharagpur via NPTEL</div>
+                            <ul style="padding-left: 16px; font-size: 12px; color: #1f2937; list-style-type: disc;">
+                                <li>Demonstrated thorough understanding of DSA fundamentals — arrays, linked lists,
+                                    stacks, queues, trees, graphs, sorting, and searching algorithms.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-top: 15px; display: flex; gap: 12px;">
+                <a href="resume.html" target="_blank" class="btn primary-btn" style="flex: 1; justify-content: center;">
+                    <i class="fa-solid fa-file-pdf"></i> Open Full Printable PDF Page
+                </a>
+                <a href="resume.html" target="_blank" class="btn secondary-btn" id="resume-modal-print-btn">
+                    <i class="fa-solid fa-print"></i> Download / Save as PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Lad - Resume PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --link-color: #2563eb;
+            --line-color: #334155;
+            --bg-body: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .resume-actions {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: var(--text-dark);
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* Precise PDF Paper Simulation */
+        .pdf-page {
+            width: 100%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 45px 50px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            border-radius: 2px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            color: #111827;
+        }
+
+        /* Header Layout */
+        .pdf-header {
+            margin-bottom: 18px;
+        }
+
+        .pdf-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .pdf-header .subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+
+        .pdf-header .contact-line {
+            font-size: 13px;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+
+        .pdf-header .links-line {
+            font-size: 13px;
+        }
+
+        .pdf-header .links-line a {
+            color: #2563eb;
+            text-decoration: underline;
+            margin: 0 2px;
+            font-weight: 500;
+        }
+
+        /* Section Styling */
+        .pdf-section {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .pdf-section-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+        }
+
+        .pdf-text {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #1f2937;
+            text-align: justify;
+        }
+
+        /* Skills List */
+        .pdf-skills-list {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        .pdf-skills-list div {
+            margin-bottom: 3px;
+        }
+
+        .pdf-skills-list strong {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        /* Items (Projects, Education, Certs) */
+        .pdf-item {
+            margin-bottom: 12px;
+        }
+
+        .pdf-item-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .pdf-item-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .pdf-item-meta {
+            font-size: 13px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .pdf-item-sub {
+            font-size: 12.5px;
+            font-style: italic;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+
+        .pdf-item-tech {
+            font-size: 12.5px;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+
+        .pdf-bullet-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 2px;
+        }
+
+        .pdf-bullet-list li {
+            position: relative;
+            padding-left: 16px;
+            font-size: 12.8px;
+            line-height: 1.5;
+            color: #1f2937;
+            margin-bottom: 3px;
+        }
+
+        .pdf-bullet-list li::before {
+            content: "●";
+            position: absolute;
+            left: 2px;
+            top: 0;
+            font-size: 8px;
+            color: #000000;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .resume-actions {
+                display: none !important;
+            }
+            .pdf-page {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Action Bar -->
+    <div class="resume-actions">
+        <button class="btn btn-primary" onclick="window.print()">
+            <i class="fa-solid fa-file-pdf"></i> Download / Save as PDF
+        </button>
+        <a href="index.html" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+    </div>
+
+    <!-- Exact Replica of Attached PDF Document -->
+    <div class="pdf-page">
+        
+        <!-- Header -->
+        <div class="pdf-header">
+            <h1>SHIVAM LAD</h1>
+            <div class="subtitle">Software Engineer | Full-Stack Developer</div>
+            <div class="contact-line">
+                Kolhapur, Maharashtra, India &nbsp;|&nbsp; +91 9309073402 &nbsp;|&nbsp; shivamlad.0909@gmail.com
+            </div>
+            <div class="links-line">
+                <a href="https://github.com/Shivamlad5457" target="_blank">GitHub</a> &nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/shivam-lad-998b972ba/" target="_blank">Linkedin</a> &nbsp;|&nbsp;
+                <a href="https://shivamlad5457.github.io/PORTFOLIO/" target="_blank">Portfolio</a> &nbsp;|&nbsp;
+                <a href="https://leetcode.com/u/Shivamlad5457/" target="_blank">Leetcode</a>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">ABOUT</div>
+            <p class="pdf-text">
+                Computer Science and Engineering student with a strong passion for software development and building efficient, user-focused solutions. Experienced in developing real-world projects and applying software engineering principles to solve practical problems. A quick learner with strong analytical, problem-solving, and collaboration skills, seeking opportunities to contribute to innovative development teams while continuously expanding technical expertise.
+            </p>
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">TECHNICAL SKILLS</div>
+            <div class="pdf-skills-list">
+                <div><strong>Programming Languages:</strong> Java, Python.</div>
+                <div><strong>Web Development:</strong> Full Stack Web Developer</div>
+                <div><strong>Core Concepts:</strong> Data Structures & Algorithms (DSA), OOP, DBMS, GitHub , MySQL</div>
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">PROJECTS</div>
+            
+            <div class="pdf-item">
+                <div class="pdf-item-title">Ration Distribution & Secure Authentication System</div>
+                <div class="pdf-item-tech"><strong>Tech Stack:</strong> PHP, MySQL, HTML, CSS, JavaScript.</div>
+                <ul class="pdf-bullet-list">
+                    <li>Built a Secure web based ration distribution system enabling real-time inventory management, quota allocation, and OTP-based two-factor authentication with advanced account security mechanisms.</li>
+                </ul>
+            </div>
+
+            <div class="pdf-item">
+                <div class="pdf-item-title">Agricultural Tools Rental Platform</div>
+                <div class="pdf-item-tech"><strong>Tech Stack:</strong> React, MySQL , Full Stack .</div>
+                <ul class="pdf-bullet-list">
+                    <li>Developed a full-stack rental platform enabling farmers to browse, book, and manage agricultural tools online, with a MySQL-backed schema for inventory, bookings, and user records.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">EDUCATION</div>
+
+            <div class="pdf-item" style="margin-bottom: 10px;">
+                <div class="pdf-item-head">
+                    <span class="pdf-item-title">Bachelor of Technology (B.Tech.) – Computer Science & Engineering</span>
+                    <span class="pdf-item-meta">2023-2027 &nbsp;&nbsp;&nbsp;&nbsp; CGPA: 8.5/10</span>
+                </div>
+                <div class="pdf-item-sub">Tatyasaheb Kore Institute of Engineering & Technology (TKIET), Warananagar</div>
+            </div>
+
+            <div class="pdf-item" style="margin-bottom: 10px;">
+                <div class="pdf-item-head">
+                    <span class="pdf-item-title">Higher Secondary Certificate (HSC) – Science</span>
+                    <span class="pdf-item-meta">2023 &nbsp;&nbsp;&nbsp;&nbsp; 64%</span>
+                </div>
+                <div class="pdf-item-sub">Samaj Vikas Sec. & Higher Secondary Vidyalaya, Sagaon.</div>
+            </div>
+
+            <div class="pdf-item" style="margin-bottom: 10px;">
+                <div class="pdf-item-head">
+                    <span class="pdf-item-title">Secondary School Certificate (SSC)</span>
+                    <span class="pdf-item-meta">2021 &nbsp;&nbsp;&nbsp;&nbsp; 78%</span>
+                </div>
+                <div class="pdf-item-sub">Samaj Vikas Sec. & Higher Secondary Vidyalaya, Sagaon.</div>
+            </div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">ACHIEVEMENTS</div>
+            <div class="pdf-item">
+                <div class="pdf-item-title">Selected for Qspiders Internship</div>
+                <ul class="pdf-bullet-list">
+                    <li>Received an offer for a 3-month internship training program after clearing a competitive technical screening test, aimed at strengthening technical skills and gaining industry exposure.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="pdf-section">
+            <div class="pdf-section-title">CERTIFICATIONS</div>
+            <div class="pdf-item" style="margin-bottom: 8px;">
+                <div class="pdf-item-title">NPTEL – Data Structures and Algorithms using Java</div>
+                <div class="pdf-item-sub" style="font-style: normal; color: #4b5563;">Issued by IIT Kharagpur via NPTEL</div>
+                <ul class="pdf-bullet-list">
+                    <li>Demonstrated thorough understanding of DSA fundamentals — arrays, linked lists, stacks, queues, trees, graphs, sorting, and searching algorithms.</li>
+                </ul>
+            </div>
+            <div class="pdf-item" style="margin-bottom: 8px;">
+                <div class="pdf-item-title">Introduction to Generative AI Studio</div>
+                <div class="pdf-item-sub" style="font-style: normal; color: #4b5563;">Powered by Google Cloud | Simplilearn SkillUp (Code: 10524604)</div>
+            </div>
+            <div class="pdf-item" style="margin-bottom: 8px;">
+                <div class="pdf-item-title">Introduction to Prompt Engineering with GitHub Copilot</div>
+                <div class="pdf-item-sub" style="font-style: normal; color: #4b5563;">Powered by Microsoft | Simplilearn SkillUp (Code: 10528894)</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
